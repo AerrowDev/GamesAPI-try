@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FreeToGame API Example</title>
+  <script>
+    function loadGames() {
+        const options = {
+          method: 'GET',
+          headers: {
+            'X-RapidAPI-Key': 'bf64b77216msh9a58d203c4c0e2ep1cb85ejsn70d6c40dd0e6',
+            'X-RapidAPI-Host': 'free-to-play-games-database.p.rapidapi.com'
+          },
+          mode: 'cors'
+        };
+
+        fetch('https://free-to-play-games-database.p.rapidapi.com/api/games', options)
+          .then(response => response.json())
+          .then(response => console.log(response))
+          .catch(err => console.error(err));
+    }
+  </script>
+</head>
+<body onload="loadGames()">
+    
+</body>
+</html>
